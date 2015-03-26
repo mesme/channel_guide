@@ -1,0 +1,4 @@
+services:
+    channel_list:
+        class: VirginMedia\ChannelGuideBundle\Service\ChannelGuide
+        arguments: [@database_connection,@doctrine]

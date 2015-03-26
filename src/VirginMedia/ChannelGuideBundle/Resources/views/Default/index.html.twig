@@ -1,0 +1,29 @@
+{% extends 'ChannelGuideBundle::layout.html.twig' %}
+{% block content %}
+    <div class="row">
+        <article class="col-sm-12 col-md-12 col-lg-12">
+            <div role="content">
+                {{form_start(form, { attr: { 'class': 'smart-form','novalidate' : 'novalidate'} })}}
+                <fieldset>
+                    <div class="row" style="padding: 15px;">
+                        <section style="float: left;">
+                            <label class="select"> Choose Package </label>
+                            {{ form_widget(form.package, {'attr': {'class': 'input-sm'}}) }}
+                        </section>
+                        <section style="float: left; padding-left: 10px;">
+                            <label class="select"> Choose Region </label>
+                            {{ form_widget(form.region, {'attr': {'class': 'input-sm'}}) }}
+                        </section>
+                    </div>
+                </fieldset>
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
+            </div>
+            <hr/>
+            <div role="content" class="clearfix" id="channels">
+                <p class="lead">Please select your appropriate region and/or package of interest.</p>
+            </div>
+            <hr/>
+        </article>
+    </div>
+{% endblock %}
