@@ -12,7 +12,7 @@ REQUIREMENTS:
 
 Service Class
 ----------------------------------
-   1. The service class that populated the channel list is located at \src/VirginMedia\ChannelGuideBundle\Service\ChannelGuide.php which is injected
+   1. The service class that populates the channel list is located at \src/VirginMedia\ChannelGuideBundle\Service\ChannelGuide.php which is injected
       from app/config/services.yml
 
 
