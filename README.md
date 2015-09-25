@@ -1,14 +1,35 @@
-Sample Channel Guide Application
+Sample Channel Guide Application using Symfony2
 ========================
 
-The application can be accessed at http://guide.gofarming.org/
+APPLICATION BACKGROUND
+  1. We have various sets of channels available in the different regions of the country. Each channel has a number and a title, which sometimes differs from region to region
+  2. We	also have three packages (S/M/L), so that all channels in a given package are present in all the larger ones. (And obviously S<M<L)
+  3. The packages are the same in all regions
 
-REQUIREMENTS:
+APPLICATION REQUIRMENTS
+  1. Create a channel guide for customer using Symfony2
+  2. Keep it simple, so it will be web only and needs a simple web interface
+  3. As a user, I want to see the list of channels, for the selected region and package.
+  Upon changing the region or package selection, the page should refresh itself without loading.
+
+SYSTEM REQUIREMENTS:
 ----------------------------------
 
 1. PHP5.4
 2. MySQL 5.5.x
 
+HOW TO RUN:
+----------------------------------
+
+1. git clone https://github.com/mesme/channel_guide.git
+2. change directory into channel_guide
+3. type "composer.phar update"
+4. type "app/console doctrine:database:create" to create the database
+5. type "app/console doctrine:schema:update --force" to create the schema
+6. type "mysql -uroot -ppassword symfony < channel.sql" to import sample data needed to run the application
+7. type "ifconfig" in linux box and note the IP address of the machine e.g 192.168.2.10:8080
+8. type "app/console server:run 192.168.3.10:8080"
+9. now go to browser e.g chrome or firefox http://192.168.3.10:8080 to see it working
 
 Service Class
 ----------------------------------
